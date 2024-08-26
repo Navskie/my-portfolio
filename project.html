@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="dist/css/style.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+   <div class="main-body">
+      <div class="navbar-body">
+         <div class="logo">
+            <h1>@Navs</h1>
+         </div>
+         <div class="links">
+            <span class="link"><a href="/">Home</a></span>
+            <span class="link"><a href="/services.html">Services</a></span>
+            <span class="link"><a href="/project.html">Project</a></span>
+            <span class="link"><a href="/about.html">About</a></span>
+            <span class="link"><a href="/work.html">Work</a></span>
+            <span class="link"><a href="cv/RONNEL NAVARRO.pdf" class="download">Hire Me</a></span>
+         </div>
+      </div>
+
+      <div class="project-container">
+         <div class="project active">
+            <div class="project-card">
+               <h1 class="number">01</h1>
+               <span class="title">Book N Earn</span>
+               <p>Browse and book a wide range of services...</p>
+               <div class="using">
+                  <span><i class='bx bxl-html5'></i></span>
+                  <span><i class='bx bxl-css3'></i></span>
+                  <span><i class='bx bxs-file-js'></i></span>
+                  <span><i class='bx bxl-jquery'></i></span>
+                  <span><i class='bx bxl-php'></i></span>
+                  <span><i class='bx bxl-postgresql'></i></span>
+               </div>
+               <div class="buttons">
+                  <a href="#" class="project-link">Github <i class='bx bxl-github'></i></a>
+                  <a href="#" class="project-link">Visit Site <i class='bx bx-globe'></i></a>
+               </div>
+            </div>
+            <div class="project-img">
+               <img src="img/booknearn.png" alt="">
+            </div>
+         </div>
+         <div class="project">
+            <div class="project-card">
+               <h1 class="number">02</h1>
+               <span class="title">Costadel Subic</span>
+               <p>Browse and book a wide range of services...</p>
+               <div class="using">
+                  <span><i class='bx bxl-html5'></i></span>
+                  <span><i class='bx bxl-css3'></i></span>
+                  <span><i class='bx bxs-file-js'></i></span>
+                  <span><i class='bx bxl-jquery'></i></span>
+                  <span><i class='bx bxl-php'></i></span>
+                  <span><i class='bx bxl-postgresql'></i></span>
+               </div>
+               <div class="buttons">
+                  <a href="#" class="project-link">Github <i class='bx bxl-github'></i></a>
+                  <a href="#" class="project-link">Visit Site <i class='bx bx-globe'></i></a>
+               </div>
+            </div>
+            <div class="project-img">
+               <img src="img/portfolio.png" alt="">
+            </div>
+         </div>
+         <div class="project">
+            <div class="project-card">
+               <h1 class="number">02</h1>
+               <span class="title">Uptimised Corporation</span>
+               <p>Browse and book a wide range of services...</p>
+               <div class="using">
+                  <span><i class='bx bxl-html5'></i></span>
+                  <span><i class='bx bxl-css3'></i></span>
+                  <span><i class='bx bxs-file-js'></i></span>
+                  <span><i class='bx bxl-jquery'></i></span>
+                  <span><i class='bx bxl-php'></i></span>
+                  <span><i class='bx bxl-postgresql'></i></span>
+               </div>
+               <div class="buttons">
+                  <a href="#" class="project-link">Github <i class='bx bxl-github'></i></a>
+                  <a href="#" class="project-link">Visit Site <i class='bx bx-globe'></i></a>
+               </div>
+            </div>
+            <div class="project-img">
+               <img src="img/portfolio.png" alt="">
+            </div>
+         </div>
+         <!-- Add more project divs as needed -->
+      </div>
+      <div class="arrow-btn">
+         <i class='bx bx-left-arrow-alt'></i>
+         <i class='bx bx-right-arrow-alt'></i>
+      </div>
+   </div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="behaviror/index.js"></script>
+   <script>
+     $(document).ready(function() {
+        let currentIndex = 0;
+        const projects = $('.project');
+        const totalProjects = projects.length;
+
+        function showProject(index) {
+            projects.removeClass('active');
+            projects.eq(index).addClass('active');
+        }
+
+        $('.bx-right-arrow-alt').click(function() {
+            currentIndex = (currentIndex + 1) % totalProjects;
+            showProject(currentIndex);
+        });
+
+        $('.bx-left-arrow-alt').click(function() {
+            currentIndex = (currentIndex - 1 + totalProjects) % totalProjects;
+            showProject(currentIndex);
+        });
+
+        // Initialize the first project
+        showProject(currentIndex);
+    });
+   </script>
+</body>
+</html>

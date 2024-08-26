@@ -7,7 +7,7 @@ $(document).ready(function() {
                i++;
                setTimeout(type, speed);
            } else if (callback) {
-               setTimeout(callback, 1000); // Wait 1 second before starting to delete
+               setTimeout(callback, 1000);
            }
        }
        type();
@@ -34,6 +34,17 @@ $(document).ready(function() {
        });
    }
 
-   // Start the typewriter effect
    startTypewriter();
+
+   var path = window.location.pathname;
+
+   $('.navbar-body .links a').removeClass('active');
+
+   $('.navbar-body .links a').each(function() {
+       if ($(this).attr('href') === path) {
+           $(this).addClass('active');
+       }
+   });
+
+   
 });
