@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Inter", sans-serif;
+   // overflow: hidden;
+}
+
+.main-body {
+   background-color: #1D1C21;
+   height: 100vh;
+}
+
+.navbar-body {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: auto 110px;
+   padding: 30px 0;
+
+   .logo {
+      color: #ffffff;
+      font-weight: 600;
+   }
+
+   .links {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+
+      .link {
+         a {
+            text-decoration: none;
+            color: #ffffff;
+         }
+
+         .download {
+            background-color: #579AFF;
+            color: #1D1C21;
+            padding: 6px 19px;
+            border-radius: 25px;
+            display: block;
+         }
+      }
+   }
+}
+
+.information {
+   display: flex;
+   padding: 20px 0;
+   justify-content: center;
+   align-items: center;
+   gap: 50px;
+
+   .details {
+      max-width: 600px;
+
+      .position {
+         color: #fff;
+         font-size: 20px;
+         padding: 10px 0;
+         font-weight: 400;
+      }
+
+      .greetings {
+         padding-top: 10px;
+         font-size: 50px;
+         color: #ffffff;
+      }
+
+      .myName {
+         font-size: 56px;
+         color: #579AFF;
+         white-space: nowrap;
+         display: inline;
+         overflow: hidden;
+         // padding-bottom: 10px;
+         border-right: 2px solid #579AFF; /* Cursor effect */
+         animation: blink-caret 0.75s step-end infinite;
+
+         @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #579AFF; }
+         }
+      }
+
+      .cover {
+         font-size: 17px;
+         color: #ffffff;
+         font-weight: 200;
+         padding-bottom: 20px;
+      }
+
+      .count {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         gap: 25px;
+         margin-bottom: 25px;
+      
+         .card {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .number {
+               color: #ffffff;
+               font-size: 56px;
+               font-weight: 700;
+            }
+
+            .text {
+               color: #ffffff;
+               font-weight: 100;
+               text-align: left;
+            }
+         }
+      }
+
+      .btnSummary {
+         display: flex;
+         gap: 25px;
+         align-items: center;
+         margin-top: 25px;
+      
+         .dl-btn {
+            padding: 12px 10px;
+            width: 209px;
+            background-color: transparent;
+            border: 2px solid #579AFF;
+            color: #ffffff;
+            font-size: 17px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.3s ease;
+            z-index: 2;
+            text-align: center;
+            white-space: nowrap;
+            text-decoration: none;
+         
+            .text {
+               display: inline; 
+               transition: opacity 0.3s ease;
+            }
+         
+            i {
+               display: inline-block;
+               opacity: 0;
+               transition: opacity 0.3s ease;
+               font-size: 17px;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               z-index: 3;
+            }
+            }
+         
+            .dl-btn::before {
+               content: '';
+               position: absolute;
+               top: -100%;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background-color: #579AFF;
+               transition: top 0.3s ease;
+               z-index: 1;
+            }
+         
+            .dl-btn:hover::before {
+               top: 0;
+            }
+         
+            .dl-btn:hover {
+               color: #ffffff;
+            }
+         
+            .dl-btn:hover .text {
+               opacity: 0;
+            }
+         
+            .dl-btn:hover i {
+               opacity: 1;
+            }
+         
+            .social {
+               display: flex;
+               gap: 10px;
+               align-items: center;
+               flex: 1;
+            
+         
+            .icon {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 40px;
+               height: 40px;
+               font-size: 25px;
+               cursor: pointer;
+               color: #ffffff;
+            }
+         }
+      }
+       
+   }
+}
