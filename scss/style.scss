@@ -339,10 +339,11 @@
 
       .using {
          display: flex;
-         justify-content: space-between;
+         justify-content: start;
          align-items: center;
          margin-top: 15px;
          margin-bottom: 30px;
+         gap: 25px;
 
          span {
             font-size: 30px;
